@@ -1,18 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Container from "./Container";
 import ThemeContext, { themeColors } from "./contexts/ThemeContext";
 import { useState } from "react";
 import TheTimeNow from "./TheTimeNow";
 
-
 function App() {
   const [toggle, setToggle] = useState(true);
   return (
     <div>
-      <ThemeContext.Provider
-        value={themeColors.light}
-      >
+      <ThemeContext.Provider value={themeColors.light}>
         <div
           className="App"
           style={{ border: "3px dotted #07f", margin: "18px" }}
@@ -22,9 +18,7 @@ function App() {
 
         <TheTimeNow />
       </ThemeContext.Provider>
-      <ThemeContext.Provider
-        value={themeColors.light}
-      >
+      <ThemeContext.Provider value={themeColors.light}>
         <div
           className="App"
           style={{ border: "3px dotted #07f", margin: "18px" }}
