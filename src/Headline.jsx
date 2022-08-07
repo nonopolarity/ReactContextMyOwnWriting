@@ -1,5 +1,6 @@
 import ThemeContext from "./contexts/ThemeContext";
 import { useContext } from "react";
+import TheTimeNow from "./TheTimeNow";
 
 function Headline() {
   const colors = useContext(ThemeContext);
@@ -14,6 +15,7 @@ function Headline() {
       }}
     >
       Headline for today: Good!
+      <TheTimeNow />
     </div>
   );
 }
