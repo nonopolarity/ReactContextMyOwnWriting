@@ -7,7 +7,7 @@ import { useState } from "react";
 function App() {
   const [toggle, setToggle] = useState(true);
   return (
-    <ThemeContext.Provider value={toggle ? themeColors.light : themeColors.dark}>
+    <ThemeContext.Provider value={{...themeColors.light, fg: (toggle ? "orange" : "black")}}>
       <div
         className="App"
         style={{ border: "3px dotted #07f", margin: "18px" }}
