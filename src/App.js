@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <ThemeContext.Provider
-        value={toggle ? themeColors.light : themeColors.dark}
+        value={themeColors.light}
       >
         <div
           className="App"
