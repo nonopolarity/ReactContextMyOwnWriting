@@ -8,7 +8,9 @@ function App() {
   const [toggle, setToggle] = useState(true);
   return (
     <div>
-      <ThemeContext.Provider value={themeColors.light}>
+      <ThemeContext.Provider
+        value={toggle ? themeColors.light : themeColors.dark}
+      >
         <div
           className="App"
           style={{ border: "3px dotted #07f", margin: "18px" }}
