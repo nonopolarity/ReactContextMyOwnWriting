@@ -1,16 +1,16 @@
 import "./App.css";
+import ThemeProvider from "./ThemeProvider";
+import ThemeProvider2 from "./ThemeProvider2";
 import Container from "./Container";
 import ThemeContext, { themeColors } from "./contexts/ThemeContext";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import TheTimeNow from "./TheTimeNow";
 
 function App() {
-  const [toggle, setToggle] = useState(true);
+
   return (
     <div>
-      <ThemeContext.Provider
-        value={toggle ? themeColors.light : themeColors.dark}
-      >
+      <ThemeProvider>
         <div
           className="App"
           style={{ border: "3px dotted #07f", margin: "18px" }}
@@ -19,8 +19,8 @@ function App() {
         </div>
 
         <TheTimeNow />
-      </ThemeContext.Provider>
-      <ThemeContext.Provider value={themeColors.light}>
+        </ThemeProvider>
+        <ThemeProvider2>
         <div
           className="App"
           style={{ border: "3px dotted #07f", margin: "18px" }}
@@ -29,8 +29,8 @@ function App() {
         </div>
 
         <TheTimeNow />
-      </ThemeContext.Provider>
-      <button onClick={() => setToggle((t) => !t)}>Toggle colors</button>
+        
+      </ThemeProvider2>
     </div>
   );
 }

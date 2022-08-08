@@ -2,7 +2,7 @@ import ThemeContext from "./contexts/ThemeContext";
 function Note() {
   return (
     <ThemeContext.Consumer>
-      {(colors) => (
+      {({colors, toggleIt}) => (
         <div
           style={{
             border: "3px dotted blue",

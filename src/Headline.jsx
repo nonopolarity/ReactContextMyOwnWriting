@@ -3,7 +3,7 @@ import { useContext } from "react";
 import TheTimeNow from "./TheTimeNow";
 
 function Headline() {
-  const colors = useContext(ThemeContext);
+  const {colors, toggleIt} = useContext(ThemeContext);
 
   return (
     <div
