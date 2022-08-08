@@ -7,7 +7,6 @@ import { useState, useContext } from "react";
 import TheTimeNow from "./TheTimeNow";
 
 function App() {
-
   return (
     <div>
       <ThemeProvider>
@@ -19,8 +18,8 @@ function App() {
         </div>
 
         <TheTimeNow />
-        </ThemeProvider>
-        <ThemeProvider2>
+      </ThemeProvider>
+      <ThemeProvider2>
         <div
           className="App"
           style={{ border: "3px dotted #07f", margin: "18px" }}
@@ -29,7 +28,6 @@ function App() {
         </div>
 
         <TheTimeNow />
-        
       </ThemeProvider2>
     </div>
   );
